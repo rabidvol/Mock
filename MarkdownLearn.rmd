@@ -1,0 +1,40 @@
+---
+title: "Allen's Play with RMD File"
+author: "Allen Pannell"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    df_print: paged
+child: "Child.rmd"
+---
+
+Other options can go above ????????????????
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE) ## Set's the defaults
+
+## knitr::include_rmd("Child.rmd")
+```
+
+## R Markdown  [RMD Help](https://yihui.org/knitr/options/)
+
+
+Below are a few more tips about chunk options:
+
+The chunk header must be written on one line. You must not break the line.
+
+Try to avoid spaces, periods (.), and underscores (_) in chunk labels and paths. If you need separators, you are recommended to use hyphens (-) instead. For example, setup-options is a good label, whereas setup.options and chunk 1 are bad; fig.path = 'figures/mcmc-' is a good path for figure output, and fig.path = 'markov chain/monte carlo' is bad.
+
+```{r cars, echo=TRUE}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
